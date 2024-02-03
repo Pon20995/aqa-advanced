@@ -1,0 +1,23 @@
+{
+  "name": "aqa-advanced",
+  "version": "1.0.0",
+  "description": "Project for improving aqa skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pon20995/aqa-advanced.git"
+  },
+  "author": "Vladyslav Sofronov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pon20995/aqa-advanced/issues"
+  },
+  "homepage": "https://github.com/Pon20995/aqa-advanced#readme",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
