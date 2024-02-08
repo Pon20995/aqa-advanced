@@ -10,7 +10,7 @@ input.question("Будь ласка, введіть число від 1 до 10:
     if (Number.isInteger(parseFloat(number))) {
       for (let i = 1; i <= 10; i++) {
         let result = number * i;
-        console.log(number + " " + "x " + i + " = " + result);
+        console.log(number + " x " + i + " = " + result);
       }
     } else {
       console.log("Введене число не ціле.");
