@@ -1,18 +1,18 @@
-import readline from "readline";
+import readline from 'readline';
 
 const input = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-input.question("Введіть ширину прямокутника: ", (width) => {
-  input.question("Введіть висоту прямокутника: ", (height) => {
+input.question('Введіть ширину прямокутника: ', (width) => {
+  input.question('Введіть висоту прямокутника: ', (height) => {
     //Function Declaration:
     function getSquare(width, height) {
       return width * height;
     }
     const square = getSquare(width, height);
-    console.log("Площа прямокутника 1: ", square);
+    console.log('Площа прямокутника 1: ', square);
     input.close();
 
     //Function Expression:
@@ -21,7 +21,7 @@ input.question("Введіть ширину прямокутника: ", (width)
       return square;
     };
     const square2 = getSquareExpression(5, 5);
-    console.log("Площа прямокутника 2: ", square2);
+    console.log('Площа прямокутника 2: ', square2);
 
     //Arrow Function:
     const getSquareArrow = (width, height) => {
@@ -29,6 +29,6 @@ input.question("Введіть ширину прямокутника: ", (width)
       return square;
     };
     const square3 = getSquareArrow(10, 5);
-    console.log("Площа прямокутника 3: ", square3);
+    console.log('Площа прямокутника 3: ', square3);
   });
 });

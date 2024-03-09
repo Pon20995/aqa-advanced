@@ -1,13 +1,13 @@
 let car1 = {
-  brand: "Peugeot",
-  model: "206",
+  brand: 'Peugeot',
+  model: '206',
   year: 2004,
 };
 
 let car2 = {
-  brand: "Honda",
-  model: "Civic",
-  owner: "Slava",
+  brand: 'Honda',
+  model: 'Civic',
+  owner: 'Slava',
 };
 
 const car3 = { ...car1, ...car2 };

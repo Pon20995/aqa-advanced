@@ -9,10 +9,10 @@ export class Book {
     return this._name;
   }
   set name(newName) {
-    if (typeof newName === "string") {
+    if (typeof newName === 'string') {
       this._name = newName;
     } else {
-      console.log("Name is not a string");
+      console.log('Name is not a string');
     }
   }
 
@@ -20,10 +20,10 @@ export class Book {
     return this._author;
   }
   set author(newAuthor) {
-    if (typeof newAuthor === "string") {
+    if (typeof newAuthor === 'string') {
       this._author = newAuthor;
     } else {
-      console.log("Author is not a string");
+      console.log('Author is not a string');
     }
   }
 
@@ -31,16 +31,16 @@ export class Book {
     return this._year;
   }
   set year(newYear) {
-    if (typeof newYear === "number" && Number.isInteger(newYear)) {
+    if (typeof newYear === 'number' && Number.isInteger(newYear)) {
       this._year = newYear;
     } else {
-      console.log("Year is not a number");
+      console.log('Year is not a number');
     }
   }
 
   printInfo() {
     console.log(
-      `The ${this.name}, is written by ${this.author} in ${this.year}`
+      `The ${this.name}, is written by ${this.author} in ${this.year}`,
     );
   }
 
@@ -51,12 +51,12 @@ export class Book {
         arrayBooks[i].year = oldestBook;
       }
     }
-    return console.log("The oldest book of year:", oldestBook);
+    return console.log('The oldest book of year:', oldestBook);
   }
 }
-const firstBook = new Book("Fight club", "Chuck Palahniuk", 1996);
-const secondBook = new Book("A Game of Thrones", "George R. R. Martin", 1996);
-const thirdBook = new Book("The Empire of the Angels", "Bernard Werber", 2000);
+const firstBook = new Book('Fight club', 'Chuck Palahniuk', 1996);
+const secondBook = new Book('A Game of Thrones', 'George R. R. Martin', 1996);
+const thirdBook = new Book('The Empire of the Angels', 'Bernard Werber', 2000);
 
 firstBook.printInfo();
 secondBook.printInfo();

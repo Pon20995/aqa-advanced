@@ -1,4 +1,4 @@
-import { Book } from "./Book.js";
+import { Book } from './Book.js';
 
 class EBook extends Book {
   constructor(name, author, year, format) {
@@ -9,10 +9,10 @@ class EBook extends Book {
     return this._format;
   }
   set format(newFormat) {
-    if (typeof newFormat === "string") {
+    if (typeof newFormat === 'string') {
       this._format = newFormat;
     } else {
-      console.log("Format is not a string");
+      console.log('Format is not a string');
     }
   }
 
@@ -22,25 +22,25 @@ class EBook extends Book {
   }
 
   static createNewEBook(book, format) {
-    if (typeof format === "string") {
+    if (typeof format === 'string') {
       return new EBook(book.name, book.author, book.year, format);
     } else {
-      console.log("Format is not a string");
+      console.log('Format is not a string');
     }
   }
 }
-const firstBook = new Book("Fight club", "Chuck Palahniuk", 1996);
-const secondBook = new Book("A Game of Thrones", "George R. R. Martin", 1996);
-const thirdBook = new Book("The Empire of the Angels", "Bernard Werber", 2000);
-const eBook = new EBook("Philosopher's Stone", "J. K. Rowling", 1997, "PDF");
+const firstBook = new Book('Fight club', 'Chuck Palahniuk', 1996);
+const secondBook = new Book('A Game of Thrones', 'George R. R. Martin', 1996);
+const thirdBook = new Book('The Empire of the Angels', 'Bernard Werber', 2000);
+const eBook = new EBook("Philosopher's Stone", 'J. K. Rowling', 1997, 'PDF');
 eBook.printInfo();
 
 EBook.isOldest([firstBook, secondBook, thirdBook, eBook]);
 
 const book = new Book(
-  "Shadows of Forgotten Ancestors",
-  "Mykhailo Kotsyubynsky",
-  1912
+  'Shadows of Forgotten Ancestors',
+  'Mykhailo Kotsyubynsky',
+  1912,
 );
-const newBook = EBook.createNewEBook(book, "EPUB");
+const newBook = EBook.createNewEBook(book, 'EPUB');
 newBook.printInfo();

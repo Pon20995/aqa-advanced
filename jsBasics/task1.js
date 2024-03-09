@@ -15,4 +15,3 @@ console.log(myNull);
 
 let myUndefined = undefined;
 console.log(myUndefined);
-

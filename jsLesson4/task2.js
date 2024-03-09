@@ -1,11 +1,11 @@
-import readline from "readline";
+import readline from 'readline';
 
 const input = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-input.question("Enter the number to start readout: ", (num) => {
+input.question('Enter the number to start readout: ', (num) => {
   function func(num) {
     console.log(num);
     if (num !== 0) {

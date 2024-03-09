@@ -1,4 +1,4 @@
-import readline from "readline";
+import readline from 'readline';
 
 const input = readline.createInterface({
   input: process.stdin,
@@ -13,7 +13,7 @@ function isEven(number) {
   }
 }
 
-input.question("Введіть число: ", (number) => {
+input.question('Введіть число: ', (number) => {
   console.log(isEven(number));
   input.close();
 });

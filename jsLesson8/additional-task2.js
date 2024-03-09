@@ -1,9 +1,9 @@
 function checkNumber(number) {
   return new Promise((resolve, reject) => {
     if (number < 10) {
-      resolve("Success");
+      resolve('Success');
     } else {
-      reject("Failure");
+      reject('Failure');
     }
   });
 }

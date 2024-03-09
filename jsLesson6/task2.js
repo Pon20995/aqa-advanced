@@ -1,6 +1,6 @@
 const book = {
-  title: "Fighr club",
-  author: "Chuck Palahniuk",
+  title: 'Fighr club',
+  author: 'Chuck Palahniuk',
   year: 1996,
 };
 

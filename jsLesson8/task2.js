@@ -1,9 +1,9 @@
 function fetchTodo() {
   return new Promise((resolve, reject) => {
-    fetch("https://jsonplaceholder.typicode.com/todos/1")
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then((response) => {
         if (!response.ok) {
-          reject(new Error("Failed to fetch todo"));
+          reject(new Error('Failed to fetch todo'));
         }
         return response.json();
       })
@@ -18,10 +18,10 @@ function fetchTodo() {
 
 function fetchUser() {
   return new Promise((resolve, reject) => {
-    fetch("https://jsonplaceholder.typicode.com/users/1")
+    fetch('https://jsonplaceholder.typicode.com/users/1')
       .then((response) => {
         if (!response.ok) {
-          reject(new Error("Failed to fetch user"));
+          reject(new Error('Failed to fetch user'));
         }
         return response.json();
       })
@@ -35,9 +35,9 @@ function fetchUser() {
 }
 Promise.all([fetchTodo(), fetchUser()])
   .then(([todo, user]) => {
-    console.log("Todo: ", todo);
-    console.log("User: ", user);
+    console.log('Todo: ', todo);
+    console.log('User: ', user);
   })
   .catch((error) => {
-    console.log("Error: ", error);
+    console.log('Error: ', error);
   });
