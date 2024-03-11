@@ -5,7 +5,7 @@ let ageVlad = 45;
 let adultAge = 18;
 
 let adultVerification1 = agePetro >= adultAge;
-let adultVerification2 = ageStacy >= adultAge; 
+let adultVerification2 = ageStacy >= adultAge;
 let adultVerification3 = ageVlad >= adultAge;
 
 console.log('Petro is ' + agePetro + ' years old');

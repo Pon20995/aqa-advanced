@@ -1,4 +1,4 @@
-import readline from "readline";
+import readline from 'readline';
 
 const input = readline.createInterface({
   input: process.stdin,
@@ -7,24 +7,24 @@ const input = readline.createInterface({
 
 function checkOrder(available, ordered) {
   if (available < ordered) {
-    return "Your order is too large, we don’t have enough goods.";
+    return 'Your order is too large, we don’t have enough goods.';
   } else if (ordered === 0) {
-    return "Your order is empty";
+    return 'Your order is empty';
   } else {
-    return "Your order is accepted";
+    return 'Your order is accepted';
   }
 }
 
 input.question(
-  "Введіть доступну кількість товарів на складі: ",
+  'Введіть доступну кількість товарів на складі: ',
   (available) => {
     input.question(
-      "Введіть кількість одиниць товару в замовленні: ",
+      'Введіть кількість одиниць товару в замовленні: ',
       (ordered) => {
         const result = checkOrder(available, ordered);
         console.log(result);
         input.close();
-      }
+      },
     );
-  }
+  },
 );

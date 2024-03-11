@@ -1,4 +1,4 @@
-import readline from "readline";
+import readline from 'readline';
 
 const input = readline.createInterface({
   input: process.stdin,
@@ -6,14 +6,14 @@ const input = readline.createInterface({
 });
 
 function reverseString(string) {
-  let stringReversed = "";
+  let stringReversed = '';
   for (let i = string.length - 1; i >= 0; i--) {
     stringReversed += string[i];
   }
   return stringReversed;
 }
 
-input.question("Введіть слово: ", (string) => {
+input.question('Введіть слово: ', (string) => {
   console.log(reverseString(string));
   input.close();
 });

@@ -2,7 +2,7 @@ async function getToDo(fetchUrl) {
   try {
     const response = await fetch(fetchUrl);
     if (!response.ok) {
-      throw new Error("Failed to fetch todo");
+      throw new Error('Failed to fetch todo');
     }
     const toDoData = await response.json();
     return toDoData;
@@ -10,13 +10,13 @@ async function getToDo(fetchUrl) {
     throw error;
   }
 }
-getToDo("https://jsonplaceholder.typicode.com/todos/1").then(console.log);
+getToDo('https://jsonplaceholder.typicode.com/todos/1').then(console.log);
 
 async function getUser(fetchUrl) {
   try {
     const response = await fetch(fetchUrl);
     if (response.status > 299) {
-      throw new Error("Failed to fetch user");
+      throw new Error('Failed to fetch user');
     }
     const userData = await response.json();
     return userData;
@@ -24,4 +24,4 @@ async function getUser(fetchUrl) {
     throw error;
   }
 }
-getUser("https://jsonplaceholder.typicode.com/users/1").then(console.log);
+getUser('https://jsonplaceholder.typicode.com/users/1').then(console.log);

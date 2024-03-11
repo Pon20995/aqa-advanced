@@ -6,5 +6,5 @@ function ageCheck(age) {
   }
 }
 
-console.log("The person of 15 is adult: ", ageCheck(15));
-console.log("The person of 25 is adult: ", ageCheck(25));
+console.log('The person of 15 is adult: ', ageCheck(15));
+console.log('The person of 25 is adult: ', ageCheck(25));

@@ -16,7 +16,7 @@ function isObjectsEqual(obj1, obj2) {
 
   for (const key of keysFromObj1) {
     //Перевірка на однаковість значень ключів
-    if (typeof obj1[key] === "string" && typeof obj2[key] === "string") {
+    if (typeof obj1[key] === 'string' && typeof obj2[key] === 'string') {
       if (obj1[key].toLowerCase() !== obj2[key].toLowerCase()) {
         return false;
       }
@@ -25,13 +25,13 @@ function isObjectsEqual(obj1, obj2) {
   return true;
 }
 
-const obj1 = { name: "john", age: 30, town: "new york" };
-const obj2 = { name: "john", age: 30, city: "new york", zip: 12345 };
-const obj3 = { name: "John", age: 30, city: "New York" };
-const obj4 = { name: "Jane", age: 25, city: "Paris" };
-const obj5 = { name: "john", age: 30, town: "New York" };
+const obj1 = { name: 'john', age: 30, town: 'new york' };
+const obj2 = { name: 'john', age: 30, city: 'new york', zip: 12345 };
+const obj3 = { name: 'John', age: 30, city: 'New York' };
+const obj4 = { name: 'Jane', age: 25, city: 'Paris' };
+const obj5 = { name: 'john', age: 30, town: 'New York' };
 
-console.log("Result of compare obj1 and obj2: " + isObjectsEqual(obj1, obj2));
-console.log("Result of compare obj1 and obj3: " + isObjectsEqual(obj1, obj3));
-console.log("Result of compare obj1 and obj4: " + isObjectsEqual(obj1, obj4));
-console.log("Result of compare obj1 and obj5: " + isObjectsEqual(obj1, obj5));
+console.log('Result of compare obj1 and obj2: ' + isObjectsEqual(obj1, obj2));
+console.log('Result of compare obj1 and obj3: ' + isObjectsEqual(obj1, obj3));
+console.log('Result of compare obj1 and obj4: ' + isObjectsEqual(obj1, obj4));
+console.log('Result of compare obj1 and obj5: ' + isObjectsEqual(obj1, obj5));
