@@ -1,10 +1,10 @@
-let car1 = {
+const car1 = {
   brand: 'Peugeot',
   model: '206',
   year: 2004,
 };
 
-let car2 = {
+const car2 = {
   brand: 'Honda',
   model: 'Civic',
   owner: 'Slava',

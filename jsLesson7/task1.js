@@ -4,9 +4,11 @@ class Human {
       throw new Error('it is abstract class');
     }
   }
+
   eat() {
     console.log('eating');
   }
+
   listen() {
     console.log('listening');
   }
@@ -21,6 +23,7 @@ class Worker extends Human {
   greetings() {
     console.log('Good morning');
   }
+
   farewell() {
     console.log('Bye. Work is finished');
   }

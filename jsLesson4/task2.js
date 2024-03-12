@@ -9,7 +9,7 @@ input.question('Enter the number to start readout: ', (num) => {
   function func(num) {
     console.log(num);
     if (num !== 0) {
-      setTimeout(function () {
+      setTimeout(() => {
         func(num - 1);
       }, 150);
     }

@@ -8,8 +8,8 @@ function filterGreaterThanValue(minValue, numbersList) {
   return filteredList;
 }
 
-let minValue = 8;
-let numbersList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+const minValue = 8;
+const numbersList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 const filtetedArray = filterGreaterThanValue(minValue, numbersList);
 console.log(filtetedArray);

@@ -5,9 +5,11 @@ class EBook extends Book {
     super(name, author, year);
     this.format = format;
   }
+
   get format() {
     return this._format;
   }
+
   set format(newFormat) {
     if (typeof newFormat === 'string') {
       this._format = newFormat;
@@ -24,9 +26,8 @@ class EBook extends Book {
   static createNewEBook(book, format) {
     if (typeof format === 'string') {
       return new EBook(book.name, book.author, book.year, format);
-    } else {
-      console.log('Format is not a string');
     }
+    console.log('Format is not a string');
   }
 }
 const firstBook = new Book('Fight club', 'Chuck Palahniuk', 1996);

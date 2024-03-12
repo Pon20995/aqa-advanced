@@ -1,6 +1,6 @@
-let numbers = [10, 20, 30, 40, 50];
+const numbers = [10, 20, 30, 40, 50];
 
-let sum = numbers.reduce(
+const sum = numbers.reduce(
   (accumulator, currentValue) => accumulator + currentValue,
   0,
 );

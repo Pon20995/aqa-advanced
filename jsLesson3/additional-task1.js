@@ -8,9 +8,8 @@ const input = readline.createInterface({
 function isEven(number) {
   if (number % 2 === 0) {
     return `The ${number} is even`;
-  } else {
-    return `The ${number} is not even`;
   }
+  return `The ${number} is not even`;
 }
 
 input.question('Введіть число: ', (number) => {
