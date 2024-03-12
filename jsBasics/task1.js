@@ -1,17 +1,17 @@
-let myString = 'I am string';
+const myString = 'I am string';
 console.log(myString);
 
-let myNumber = 358;
+const myNumber = 358;
 console.log(myNumber);
 
-let myPositiveBoolean = true;
+const myPositiveBoolean = true;
 console.log(myPositiveBoolean);
 
-let myNegativeBoolean = false;
+const myNegativeBoolean = false;
 console.log(myNegativeBoolean);
 
-let myNull = null;
+const myNull = null;
 console.log(myNull);
 
-let myUndefined = undefined;
+const myUndefined = undefined;
 console.log(myUndefined);

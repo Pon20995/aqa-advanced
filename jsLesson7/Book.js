@@ -8,6 +8,7 @@ export class Book {
   get name() {
     return this._name;
   }
+
   set name(newName) {
     if (typeof newName === 'string') {
       this._name = newName;
@@ -19,6 +20,7 @@ export class Book {
   get author() {
     return this._author;
   }
+
   set author(newAuthor) {
     if (typeof newAuthor === 'string') {
       this._author = newAuthor;
@@ -30,6 +32,7 @@ export class Book {
   get year() {
     return this._year;
   }
+
   set year(newYear) {
     if (typeof newYear === 'number' && Number.isInteger(newYear)) {
       this._year = newYear;
@@ -45,7 +48,7 @@ export class Book {
   }
 
   static isOldest(arrayBooks) {
-    let oldestBook = arrayBooks[0].year;
+    const oldestBook = arrayBooks[0].year;
     for (let i = 0; i < arrayBooks.length; i++) {
       if (arrayBooks[i].year < oldestBook) {
         arrayBooks[i].year = oldestBook;
