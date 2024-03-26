@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "cy:run:headed": "npx cypress run -b chrome --headed --spec",
+    "cy:run:headless": "npx cypress run -b chrome --headless --spec"
   },
   "husky": {
     "hooks": {
