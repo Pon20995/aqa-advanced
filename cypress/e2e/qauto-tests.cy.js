@@ -1,7 +1,7 @@
-describe('template spec', () => {
+describe('Profile tests without login', () => {
   beforeEach(() => {
     cy.viewport(1440, 768);
-    cy.visit('https://qauto.forstudy.space/panel/garage', {
+    cy.visit('/panel/garage', {
       failOnStatusCode: false,
       auth: {
         username: 'guest',

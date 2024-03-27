@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('Guru tests', () => {
   beforeEach(() => {
     cy.viewport(1440, 768);
     cy.visit('https://www.guru99.com/');

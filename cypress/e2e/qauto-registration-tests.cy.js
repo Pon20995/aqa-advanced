@@ -1,16 +1,10 @@
 import RegistrationForm from './pages/RegistrationForm';
-describe('template spec', () => {
+describe('Registration form tests', () => {
   const registrationForm = new RegistrationForm();
 
   beforeEach(() => {
     cy.viewport(1440, 768);
-    cy.visit('https://qauto.forstudy.space/panel/garage', {
-      failOnStatusCode: false,
-      auth: {
-        username: 'guest',
-        password: 'welcome2qauto',
-      },
-    });
+    cy.loginWithLegacyCreds();
     cy.get('button.header_signin').should('be.visible').click();
     cy.get('h4.modal-title').should('have.text', 'Log in');
     cy.get('div.modal-footer button.btn-link').click();
