@@ -12,7 +12,7 @@ export default class GaragePage {
     return cy.get('select#addCarModel');
   }
   mileageInput() {
-    return cy.get('div input');
+    return cy.get('div input#addCarMileage');
   }
   addCarButtonForm() {
     return cy.get(
@@ -48,6 +48,9 @@ export default class GaragePage {
   }
   totalCostInput() {
     return cy.get('input#addExpenseTotalCost');
+  }
+  fuelExpenseSidebarButton() {
+    return cy.get('a[routerlink="expenses"]');
   }
   addExpenseButtonForm() {
     return cy.get(

@@ -34,6 +34,42 @@ Cypress.Commands.add('loginWithLegacyCreds', () => {
     },
   });
 });
+
+Cypress.Commands.add(
+  'makeExpenseRequestAndCheckResponse',
+  (carId, reportedAt, mileage, liters, totalCost, forceMileage) => {
+    cy.wait(1000);
+    cy.getCookie('sid').then((cookie) => {
+      const cookieValue = cookie.value;
+
+      cy.request({
+        method: 'POST',
+        url: '/api/expenses',
+        body: {
+          carId: carId,
+          reportedAt: reportedAt,
+          mileage: mileage,
+          liters: liters,
+          totalCost: totalCost,
+          forceMileage: forceMileage,
+        },
+        headers: {
+          Cookie: `sid=${cookieValue}`,
+        },
+      }).then((response) => {
+        expect(response.status).to.equal(200);
+        expect(response.body).to.have.property('status', 'ok');
+        expect(response.body.data).to.have.property('id');
+        expect(response.body.data).to.have.property('carId', carId);
+        expect(response.body.data).to.have.property('reportedAt', reportedAt);
+        expect(response.body.data).to.have.property('mileage', mileage);
+        expect(response.body.data).to.have.property('liters', liters);
+        expect(response.body.data).to.have.property('totalCost', totalCost);
+      });
+    });
+  },
+);
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
